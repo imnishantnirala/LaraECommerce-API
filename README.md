@@ -8,7 +8,7 @@
 </p>
 
 <h1 align="center">
-LaraCommerce REST API
+ECommerce REST API
 </h1>
 
 <h5 align="center">

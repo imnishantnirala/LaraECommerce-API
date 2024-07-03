@@ -7,59 +7,137 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+<h1 align="center">
+LaraCommerce REST API
+</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<h5 align="center">
+REST API for E-Commerce platform with admin panel integration.
+</h5>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+    <a href="https://github.com/muhammadhabibfery/laracommerce-api/actions/workflows/ci.yml">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/muhammadhabibfery/laracommerce-api/ci.yml?logo=github">
+    <a href="https://www.php.net">
+        <img src="https://img.shields.io/badge/php-%3E%3D8.1-%23777BB4" />
+    </a>
+    <a href="https://laravel.com">
+        <img src="https://img.shields.io/badge/laravel-9.x-%23EC4E3D" />
+    </a>
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</br>
 
-## Learning Laravel
+| [Features][] | [Requirements][] | [Install][] | [How to setting][] | [API Docs][] | [License][] |
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- |<h3>Menu  </h3>        |       Description                                                                 |
+  |-----------------------|-----------------------------------------------------------------------------------|
+  |<b>Users               | </b>Create employee and manage all users.                                         |
+  |<b>Orders              | </b>Manage the orders.                                                            |
+  |<b>Finances            | </b>Manage the finances.                                                          |
+  |<b>Withdraw            | </b>Manage the merchant's withdraw request.                                       |
+  |<b>Bankings            | </b>Create and manage available banking for merchant.                             |
+  |<b>Categories          | </b>Create and manage available category for merchant's products.                 |
+  |<b>Profile             | </b>Edit user's profile and password.                                             |
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Requirements
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+	PHP = ^8.1.x
+    laravel = ^9.x
+    kavist/rajaongkir = ^1.x
+    midtrans/midtrans-php = ^2.x
+    laravel/scout = ^9.x
+    filament/filament = ^2.x
+    beyondcode/laravel-websockets = ^1.x
+    pusher/pusher-php-server = ^7.x
+    flowframe/laravel-trend = ^0.1.x
+    barryvdh/laravel-debugbar = ^3.x
+    laravel-echo = ^1.15.x
+    pusher-js = ^8.x
 
-### Premium Partners
+## Install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Clone repo
 
-## Contributing
+```
+git clone https://github.com/imnishantnirala/LaraECommerce-API.git 
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Install Composer
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+[Download Composer](https://getcomposer.org/download/)
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+composer update/install 
+
+```
+composer install
+```
+
+## How to setting 
+
+Go into .env file change Database and Email credentials. Then setup some configuration with your own credentials
+```
+
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:QRvu9fCy6xP6aVMhkDgy5AlfrgvGlsoSxFKDqa3vj+I=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ecomm
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+
+Run the migration
+
+```
+php artisan migrate
+```
+
+Or run the migration with seeder if you want seeding the related data
+
+```
+php artisan migrate --seed
+```
+
+Generate a New Application Key
+
+```
+php artisan key:generate
+```
+
+Create a symbolic link
+
+```
+php artisan storage:link
+```
+
+## API Docs
+
+</br>
+<p style="font-weight: bold;">
+Complete REST API Documentation can be found <a href="#">here</a>
+</p>
+
+
+## License
+
+
+[Requirements]:#requirements
+[Install]:#install
+[How to setting]:#how-to-setting
+[API Docs]:#api-docs
+[License]:#license
 
 ## License
 

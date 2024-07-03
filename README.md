@@ -12,7 +12,7 @@ ECommerce REST API
 </h1>
 
 <h5 align="center">
-REST API for E-Commerce platform with admin panel integration.
+REST API for E-Commerce platform.
 </h5>
 
 <p align="center">
